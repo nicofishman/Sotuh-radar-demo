@@ -1,0 +1,26 @@
+---
+import type { Pokemon } from "../../types";
+
+type Res = {count: number; next: string; previous: string | null; results: {name: string; url: string}[]}
+
+
+export const getStaticPaths = async () => {
+    const {results} = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then((res) => res.json() as Promise<Res>);
+    const paths = results.map((result) => ({
+        params: {name: result.name},
+    }));
+    
+    return paths
+};
+
+const {name} = Astro.params;
+
+const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => res.json() as Promise<Pokemon>);
+
+
+---
+
+<div>
+    <h1>{name}</h1>
+    <p>{JSON.stringify(pokemon)}</p>
+</div>
