@@ -1,72 +1,87 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "tailwindcss",
-        "import"
-    ],
-    "rules": {
-        "react/prop-types": "off",
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off",
-        "semi": ["error", "always"],
-        "indent": ["error", 4],
-        "tailwindcss/enforces-shorthand": "warn",
-        "tailwindcss/no-contradicting-classname": "warn",
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            {
-                "args": "after-used",
-                "ignoreRestSiblings": false,
-                "argsIgnorePattern": "^_.*?$"
-            }
-        ],
-        "import/order": ["warn", {
-            "groups": ["type", "builtin", "object", "external", "internal",   "parent", "sibling", "index"],
-            "pathGroups": [{
-                "pattern": "~/**",
-                "group": "external",
-                "position": "after"
-            }],
-            "newlines-between": "always"
-        }],
-        "react/self-closing-comp": "warn",
-        "react/jsx-sort-props": [
-            "warn",
-            {
-                "callbacksLast": true,
-                "shorthandFirst": true,
-                "noSortAlphabetically": false,
-                "reservedFirst": true
-            }
-        ],
-        "padding-line-between-statements": [
-            "warn",
-            {"blankLine": "always", "prev": "*", "next": "return"},
-            {"blankLine": "always", "prev": ["const", "let", "var"], "next":  "*"},
-            {"blankLine": "any", "prev": ["const", "let", "var"], "next":     ["const", "let", "var"]}
-        ]
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    }
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["standard", "plugin:astro/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"overrides": [
+		{
+			"files": ["*.astro"],
+			"parser": "astro-eslint-parser",
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser",
+				"extraFileExtensions": [".astro"]
+			},
+			"rules": {
+				"indent": ["error", "tab"],
+				"semi": ["error", "always"],
+				"tailwindcss/enforces-shorthand": "warn",
+				"tailwindcss/no-contradicting-classname": "warn",
+				"tailwindcss/classnames-order": "warn",
+				"no-tabs": "off",
+				"comma-dangle": "off"
+			}
+		}
+	],
+	"plugins": ["@typescript-eslint", "tailwindcss", "import"],
+	"rules": {
+		"semi": ["error", "always"],
+		"indent": ["error", 4],
+		"tailwindcss/enforces-shorthand": "warn",
+		"tailwindcss/no-contradicting-classname": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"args": "after-used",
+				"ignoreRestSiblings": false,
+				"argsIgnorePattern": "^_.*?$"
+			}
+		],
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"type",
+					"builtin",
+					"object",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index"
+				],
+				"pathGroups": [
+					{
+						"pattern": "~/**",
+						"group": "external",
+						"position": "after"
+					}
+				],
+				"newlines-between": "always"
+			}
+		],
+		"padding-line-between-statements": [
+			"warn",
+			{ "blankLine": "always", "prev": "*", "next": "return" },
+			{
+				"blankLine": "always",
+				"prev": ["const", "let", "var"],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": ["const", "let", "var"],
+				"next": ["const", "let", "var"]
+			}
+		]
+	}
 }

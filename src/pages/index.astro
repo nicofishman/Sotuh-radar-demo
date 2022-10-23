@@ -1,12 +1,18 @@
 ---
 // import { log } from "astro/dist/core/logger/core";
-import Layout from "../components/Layout/layout.astro";
-import Navbar from "../components/navbar.astro";
-import PokeCard from "../components/pokeCard.astro";
+import Layout from '../components/Layout/layout.astro';
+import PokeCard from '../components/pokeCard.astro';
 
-type Res = {count: number; next: string; previous: string | null; results: {name: string; url: string}[]}
+type Res = {
+	count: number;
+	next: string;
+	previous: string | null;
+	results: { name: string; url: string }[];
+};
 
-const {results} = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then((res) => res.json() as Promise<Res>);
+const { results } = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(
+	(res) => res.json() as Promise<Res>
+);
 ---
 
 <html lang="en">
@@ -18,14 +24,14 @@ const {results} = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").the
 		<title>Astro</title>
 	</head>
 	<Layout>
-        <div>
-            <button class="w-24 h-10 flex justify-center items-center bg-blue-500 p-4 m-4"><a href="/whoami">Whoami</a></button>
-            <h1>Astro</h1>
-        </div>
-        <div class="flex flex-wrap justify-center">
-            {results.map((pokemon, idx) => (
-                <PokeCard pokemon={pokemon} id={idx}/>
-            ))}
-        </div>
-    </Layout>
+		<div>
+			<button class="w-24 h-10 flex justify-center items-center bg-blue-500 p-4 m-4">
+				<a href="/whoami">Whoami</a>
+			</button>
+			<h1>Astro</h1>
+		</div>
+		<div class="flex flex-wrap justify-center">
+			{results.map((pokemon, idx) => <PokeCard pokemon={pokemon} id={idx} />)}
+		</div>
+	</Layout>
 </html>
