@@ -1,8 +1,11 @@
 ---
-import Navbar from '../navbar.astro';
+import Sidebar from '../sidebar.astro';
 ---
 
 <body class="bg-red-500 w-full h-screen">
-	<Navbar />
-	<slot />
+	<!-- <Navbar /> -->
+	<Sidebar />
+	<div class="flex-1 mr-[400px]">
+		<slot />
+	</div>
 </body>

@@ -1,0 +1,13 @@
+---
+import { Sections } from '../sections';
+---
+
+<div class="fixed right-0 top-0 h-screen bg-lime-500 w-[400px]">
+	{
+		Object.entries(Sections).map(([key]) => (
+			<a href={`#${key}`} class="block p-4 bg-yellow-200 mb-2">
+				{key}
+			</a>
+		))
+	}
+</div>

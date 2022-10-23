@@ -1,21 +1,10 @@
 ---
 // import { log } from "astro/dist/core/logger/core";
 import Layout from '../components/Layout/layout.astro';
-import PokeCard from '../components/pokeCard.astro';
-
-type Res = {
-	count: number;
-	next: string;
-	previous: string | null;
-	results: { name: string; url: string }[];
-};
-
-const { results } = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(
-	(res) => res.json() as Promise<Res>
-);
+import { Sections } from '../sections';
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -24,14 +13,14 @@ const { results } = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151').t
 		<title>Astro</title>
 	</head>
 	<Layout>
-		<div>
-			<button class="w-24 h-10 flex justify-center items-center bg-blue-500 p-4 m-4">
-				<a href="/whoami">Whoami</a>
-			</button>
-			<h1>Astro</h1>
-		</div>
-		<div class="flex flex-wrap justify-center">
-			{results.map((pokemon, idx) => <PokeCard pokemon={pokemon} id={idx} />)}
-		</div>
+		{
+			Object.entries(Sections).map(([key, Comp]) => {
+				return (
+					<div id={key}>
+						<Comp />
+					</div>
+				);
+			})
+		}
 	</Layout>
 </html>
