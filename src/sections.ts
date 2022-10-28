@@ -1,14 +1,15 @@
 import SectionA from './components/sections/SectionA.astro';
 import SectionB from './components/sections/SectionB.astro';
-import SectionC from './components/sections/SectionC.astro';
+// import SectionC from './components/sections/SectionC.astro';
 import SectionD from './components/sections/SectionD.astro';
 import PokeSection from './components/sections/PokeSection.astro';
 
 export type SectionsType = {
     id: string,
-    children?: SectionsType[]
-    component?: typeof SectionA
-}
+} & (
+        { component: typeof SectionA; children?: never; }
+        | { children: SectionsType[]; component?: never; }
+    )
 
 export const Sections: SectionsType[] = [
     {
@@ -28,7 +29,16 @@ export const Sections: SectionsType[] = [
         children: [
             {
                 id: 'C',
-                component: SectionC
+                children: [
+                    {
+                        id: 'PokeSection2',
+                        component: PokeSection
+                    },
+                    {
+                        id: 'PokeSection3',
+                        component: PokeSection
+                    }
+                ]
             },
             {
                 id: 'Poke',

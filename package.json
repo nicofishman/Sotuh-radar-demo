@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^2.1.1",
-    "astro": "^1.5.2"
+    "astro": "^1.5.2",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.1",

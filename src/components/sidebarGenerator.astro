@@ -1,0 +1,22 @@
+---
+import type { SectionsType } from '../sections';
+
+const { section } = Astro.props as { section: SectionsType };
+
+console.log(section.id);
+---
+
+<>
+	<a href={`#${section.id}`} class="block p-4 bg-yellow-200 mb-2">
+		{section.id}
+	</a>
+</>
+{
+	'children' in section && section.children && (
+		<div class="ml-8">
+			{section.children.map((section) => (
+				<Astro.self section={section} />
+			))}
+		</div>
+	)
+}
