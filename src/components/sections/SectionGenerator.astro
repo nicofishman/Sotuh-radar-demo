@@ -1,0 +1,11 @@
+---
+import type { SectionsType } from '../../sections';
+
+const { section } = Astro.props as { section: SectionsType };
+
+const Sect = section.component ?? section.children ?? null;
+---
+
+<div id={section.id}>
+	{Sect ? Array.isArray(Sect) ? Sect.map((s) => <Astro.self section={s} />) : <Sect /> : null}
+</div>

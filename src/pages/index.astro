@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout/layout.astro';
+import SectionGenerator from '../components/sections/SectionGenerator.astro';
 import { Sections } from '../sections';
 ---
 
@@ -13,12 +14,8 @@ import { Sections } from '../sections';
 	</head>
 	<Layout>
 		{
-			Object.entries(Sections).map(([key, Comp]) => {
-				return (
-					<div id={key}>
-						<Comp />
-					</div>
-				);
+			Sections.map((section) => {
+				return <SectionGenerator section={section} />;
 			})
 		}
 	</Layout>
