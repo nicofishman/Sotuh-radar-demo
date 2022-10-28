@@ -12,12 +12,12 @@ const { results } = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151').t
 );
 ---
 
-<div>
-	<button class="w-24 h-10 flex justify-center items-center bg-blue-500 p-4 m-4">
+<div class="bg-red-500 relative">
+	<button class="w-24 h-10 flex justify-center items-center bg-blue-500 p-4">
 		<a href="/whoami">Whoami</a>
 	</button>
 	<h1>Astro</h1>
-</div>
-<div class="flex flex-wrap justify-center">
-	{results.map((pokemon, idx) => <PokeCard pokemon={pokemon} id={idx} />)}
+	<div class="flex flex-wrap justify-center">
+		{results.map((pokemon, idx) => <PokeCard pokemon={pokemon} id={idx} />)}
+	</div>
 </div>

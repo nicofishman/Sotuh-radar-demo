@@ -2,15 +2,18 @@
 const { pokemon, id } = Astro.props;
 ---
 
-<div class="w-1/4 bg-white m-2 rounded-md flex flex-col justify-center">
+<div
+	class="w-1/4 bg-white rounded-md m-2 flex flex-col justify-center shadow-md drop-shadow-md h-auto"
+>
 	<a href={`/pokemon/${pokemon.name}`}>
 		<img
+			class="p-2 border-b-gray-900 border-2"
 			src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
 				id + 1
 			}.png`}
 		/>
 
-		<h2 class="font-bold text-center capitalize py-2 text-2xl">
+		<h2 class="font-bold text-center capitalize py-2 text-2xl font-mono">
 			{pokemon.name}
 		</h2>
 	</a>

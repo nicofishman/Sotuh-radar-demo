@@ -5,7 +5,7 @@ import PokeSection from './components/sections/PokeSection.astro';
 export const Sections: {
     [key: string]: typeof SectionA;
 } = {
-    pito: SectionA,
-    B: SectionB,
-    Poke: PokeSection
+    A: SectionA,
+    Poke: PokeSection,
+    B: SectionB
 };
