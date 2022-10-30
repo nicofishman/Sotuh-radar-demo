@@ -11,9 +11,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^1.2.2",
     "@astrojs/tailwind": "^2.1.1",
+    "@headlessui/react": "^1.7.3",
+    "@heroicons/react": "^2.0.12",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
     "astro": "^1.5.2",
-    "clsx": "^1.2.1"
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.1",

@@ -1,21 +1,60 @@
 ---
 import type { SectionsType } from '../sections';
 
-const { section } = Astro.props as { section: SectionsType };
+import clsx from 'clsx';
+const { section, level } = Astro.props as { section: SectionsType; level: number };
 
-console.log(section.id);
+const stacked = level ?? 0;
+
+const fontStyle: {
+	[key: number]: {
+		size: string;
+		opacity: string;
+	};
+} = {
+	0: {
+		size: 'text-xl',
+		opacity: 'text-opacity-100',
+	},
+	1: {
+		size: 'text-lg',
+		opacity: 'text-opacity-80',
+	},
+	2: {
+		size: 'text-base',
+		opacity: 'text-opacity-60',
+	},
+	3: {
+		size: 'text-sm',
+		opacity: 'text-opacity-40',
+	},
+	4: {
+		size: 'text-xs',
+		opacity: 'text-opacity-20',
+	},
+};
 ---
 
 <>
-	<a href={`#${section.id}`} class="block p-4 bg-yellow-200 mb-2">
-		{section.id}
+	<a href={`#${section.id}`} class="block px-4 py-3 mb-2 border-b-[1px] border-b-white/40">
+		<span
+			class={clsx(
+				'text-white font-sans hover:text-opacity-100 transition-colors',
+				Object.keys(fontStyle).includes(stacked.toString())
+					? fontStyle[stacked].size
+					: 'text-base',
+				Object.keys(fontStyle).includes(stacked.toString()) ? fontStyle[stacked].opacity : 1
+			)}
+		>
+			{section.id}</span
+		>
 	</a>
 </>
 {
 	'children' in section && section.children && (
 		<div class="ml-8">
 			{section.children.map((section) => (
-				<Astro.self section={section} />
+				<Astro.self section={section} level={level + 1} />
 			))}
 		</div>
 	)

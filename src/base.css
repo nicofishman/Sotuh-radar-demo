@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base{
+    .card {
+        @apply bg-current bg-card-gradient;
+    }
+}
