@@ -9,13 +9,15 @@ module.exports = {
                     DEFAULT: '#fc4c02',
                     'light-orange': '#E95420',
                     yellow: '#EFB73E'
-                }
+                },
+                navbar: "#04332b",
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif']
             },
             backgroundImage: {
-                'card-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))'
+                'card-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))',
+                overview: 'url(/bgSouth.png)'
             }
         }
     },
