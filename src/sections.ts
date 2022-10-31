@@ -1,49 +1,61 @@
-import SectionA from './components/sections/SectionA.astro';
-import SectionB from './components/sections/SectionB.astro';
-// import SectionC from './components/sections/SectionC.astro';
-import SectionD from './components/sections/SectionD.astro';
-import PokeSection from './components/sections/PokeSection.astro';
+import Header from './components/sections/Header.astro';
+import Technology1 from './components/sections/Technology1.astro';
+import Technology2 from './components/sections/Technology2.astro';
+import Technology3 from './components/sections/Technology3.astro';
+import Technology4 from './components/sections/Technology4.astro';
+import Join from './components/sections/Join.astro';
+import CompanyInfo from './components/sections/CompanyInfo.astro';
+import PastProjects from './components/sections/PastProjects.astro';
 
 export type SectionsType = {
     id: string,
 } & (
-        { component: typeof SectionA; children?: never; }
+        { component: typeof Header; children?: never; }
         | { children: SectionsType[]; component?: never; }
     )
 
 export const Sections: SectionsType[] = [
     {
-        id: 'A',
-        component: SectionA
+        id: 'Overview',
+        component: Header
     },
     {
-        id: 'D',
-        component: SectionD
-    },
-    {
-        id: 'B',
-        component: SectionB
-    },
-    {
-        id: 'SectionsTest',
+        id: 'Technology',
         children: [
             {
-                id: 'C',
-                children: [
-                    {
-                        id: 'PokeSection2',
-                        component: PokeSection
-                    },
-                    {
-                        id: 'PokeSection3',
-                        component: PokeSection
-                    }
-                ]
+                id: 'Language',
+                component: Technology1
             },
             {
-                id: 'Poke',
-                component: PokeSection
+                id: 'Framework',
+                component: Technology2
+            },
+            {
+                id: 'Services',
+                component: Technology3
+            },
+            {
+                id: 'Platform',
+                component: Technology4
+            }
+        ]
+    },
+    {
+        id: 'Work',
+        children: [
+            {
+                id: 'Join SOUTHWORKS',
+                component: Join
+            },
+            {
+                id: 'CompanyInfo',
+                component: CompanyInfo
+            },
+            {
+                id: 'Past Projects',
+                component: PastProjects
             }
         ]
     }
+
 ];

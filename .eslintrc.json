@@ -27,6 +27,7 @@
 				"tailwindcss/enforces-shorthand": "warn",
 				"tailwindcss/no-contradicting-classname": "warn",
 				"tailwindcss/classnames-order": "warn",
+				"tailwindcss/no-custom-classname": "warn",
 				"no-tabs": "off",
 				"comma-dangle": "off",
 				"multiline-ternary": "error",
