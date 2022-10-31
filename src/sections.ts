@@ -27,12 +27,12 @@ export const Sections: SectionsType[] = [
                 component: Technology1
             },
             {
-                id: 'Framework',
-                component: Technology2
-            },
-            {
                 id: 'Services',
                 component: Technology3
+            },
+            {
+                id: 'Framework',
+                component: Technology2
             },
             {
                 id: 'Platform',
