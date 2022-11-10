@@ -2,6 +2,8 @@
 import type { SectionsType } from '../sections';
 
 import clsx from 'clsx';
+
+import Accordion from './UI/Accordion.astro';
 const { section, level } = Astro.props as { section: SectionsType; level: number };
 
 const stacked = level ?? 0;
@@ -35,27 +37,50 @@ const fontStyle: {
 };
 ---
 
-<>
-	<a href={`#${section.id}`} class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30">
-		<span
-			class={clsx(
-				'text-white font-sans hover:text-opacity-100 transition-colors',
-				Object.keys(fontStyle).includes(stacked.toString())
-					? fontStyle[stacked].size
-					: 'text-base',
-				Object.keys(fontStyle).includes(stacked.toString()) ? fontStyle[stacked].opacity : 1
-			)}
-		>
-			{section.id}</span
-		>
-	</a>
-</>
 {
-	'children' in section && section.children && (
-		<div class="ml-8">
-			{section.children.map((section) => (
-				<Astro.self section={section} level={level + 1} />
-			))}
-		</div>
-	)
+	!('children' in section)
+		? (
+			<a
+				href={`#${section.id}`}
+				class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30"
+			>
+				<span
+					class={clsx(
+						'text-white font-sans hover:text-opacity-100 transition-colors',
+						Object.keys(fontStyle).includes(stacked.toString())
+							? fontStyle[stacked].size
+							: 'text-base',
+						Object.keys(fontStyle).includes(stacked.toString())
+							? fontStyle[stacked].opacity
+							: 1
+					)}
+				>
+					{section.id}
+				</span>
+			</a>
+		)
+		: (
+			section.children && (
+				<div class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30">
+					<Accordion
+						header={section.id}
+						className={clsx(
+							'text-white font-sans hover:text-opacity-100 transition-colors',
+							Object.keys(fontStyle).includes(stacked.toString())
+								? fontStyle[stacked].size
+								: 'text-base',
+							Object.keys(fontStyle).includes(stacked.toString())
+								? fontStyle[stacked].opacity
+								: 1
+						)}
+					>
+						<div class="ml-8">
+							{section.children.map((section) => (
+								<Astro.self section={section} level={level + 1} />
+							))}
+						</div>
+					</Accordion>
+				</div>
+			)
+		)
 }

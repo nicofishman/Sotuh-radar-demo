@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{html,tsx,astro}'],
+    content: ['./src/**/*.{html,tsx,astro}', './node_modules/tw-elements/dist/js/**/*.js'],
     theme: {
         extend: {
             colors: {
@@ -10,7 +10,7 @@ module.exports = {
                     'light-orange': '#E95420',
                     yellow: '#EFB73E'
                 },
-                navbar: "#04332b",
+                navbar: '#04332b'
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif']
@@ -21,5 +21,7 @@ module.exports = {
             }
         }
     },
-    plugins: []
+    plugins: [
+        require('tw-elements/dist/plugin')
+    ]
 };
