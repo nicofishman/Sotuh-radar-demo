@@ -1,0 +1,17 @@
+---
+import { Icon } from 'astro-icon';
+import clsx from 'clsx';
+const { class: className } = Astro.props;
+---
+
+<button
+	class={clsx(
+		'bg-dark-green flex gap-5 rounded-lg items-center text-white py-3 px-7 w-auto mt-10',
+		className
+	)}
+>
+	<span class="font-bold flex-nowrap">
+		<slot />
+	</span>
+	<Icon name="akar-icons:chevron-right" class="h-4 w-4" />
+</button>

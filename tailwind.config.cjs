@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 'dark-green': '#03332b',
+                'light-gray': '#D2D2D2',
                 primary: {
                     orange: '#fc4c02',
                     green: '#80dfa6',
@@ -12,7 +13,7 @@ module.exports = {
                     white: '#fff'
                 },
                 secondary: {
-                    white: '#fff',
+                    'light-gray': '#F6F8FC',
                     aqua: '#d2f2f2',
                     cream: '#fdf1be',
                     rose: '#fec9b3',
@@ -25,11 +26,13 @@ module.exports = {
                 navbar: '#04332b'
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif']
+                sans: ['Inter', 'sans-serif'],
+                poppins: ['Poppins', 'sans-serif']
             },
             backgroundImage: {
                 'card-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))',
-                overview: 'url(/bgSouth.png)'
+                overview: 'url(/bgSouth.png)',
+                gradient: 'linear-gradient(180.42deg, #FAAF25 0.36%, #FC4C02 52.07%, #FF3400 99.65%)'
             }
         }
     },

@@ -47,7 +47,7 @@ const fontStyle: {
 				>
 					<span
 						class={clsx(
-							'text-white font-sans hover:text-opacity-100 transition-colors',
+							'text-white hover:text-opacity-100 transition-colors',
 							Object.keys(fontStyle).includes(stacked.toString())
 								? fontStyle[stacked].size
 								: 'text-base',
@@ -66,7 +66,7 @@ const fontStyle: {
 						<Accordion
 							header={section.id}
 							className={clsx(
-								'text-white font-sans hover:text-opacity-100 transition-colors',
+								'text-white hover:text-opacity-100 transition-colors',
 								Object.keys(fontStyle).includes(stacked.toString())
 									? fontStyle[stacked].size
 									: 'text-base',

@@ -1,0 +1,36 @@
+---
+import ButtonChevron from '../UI/ButtonChevron.astro';
+import Card from '../UI/Card.astro';
+---
+
+<div class="bg-slate-500 w-full flex flex-col gap-6 h-full p-5">
+	<Card class="bg-secondary-cream h-72">
+		<h4 class="font-bold">Join SOUTHWORKS</h4>
+		<p class="mr-40">
+			Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
+				class="font-bold">quis nostrud</span
+			> exerci tation
+		</p>
+		<ButtonChevron class="w-60">Customer stories</ButtonChevron>
+	</Card>
+	<div class="flex gap-5 h-auto">
+		<Card class="bg-secondary-light-green w-1/2 flex flex-col items-center h-80">
+			<h4 class="font-bold mb-6">Past projects</h4>
+			<p class="text-center px-12 text-base">
+				Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
+					class="font-bold">quis nostrud</span
+				> exerci tation
+			</p>
+			<ButtonChevron>Customer stories</ButtonChevron>
+		</Card>
+		<Card class="bg-secondary-rose w-1/2 flex flex-col items-center h-80">
+			<h4 class="font-bold mb-6">Company Info</h4>
+			<p class="text-center px-12 text-base">
+				Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
+					class="font-bold">quis nostrud</span
+				> exerci tation
+			</p>
+			<ButtonChevron>Discover SOUTHWORKS</ButtonChevron>
+		</Card>
+	</div>
+</div>

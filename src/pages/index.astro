@@ -2,6 +2,7 @@
 import Layout from '../components/Layout/layout.astro';
 import SectionGenerator from '../components/sections/SectionGenerator.astro';
 import { Sections } from '../sections';
+import '../base.css';
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -20,3 +21,9 @@ import { Sections } from '../sections';
 		}
 	</Layout>
 </html>
+
+<style is:global>
+	html {
+		font-family: Poppins;
+	}
+</style>

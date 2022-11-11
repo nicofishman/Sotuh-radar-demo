@@ -1,11 +1,12 @@
 ---
 import Sidebar from '../sidebar.astro';
+import Footer from '../sections/Footer.astro';
 ---
 
 <body class="bg-white w-full h-screen">
-	<!-- <Navbar /> -->
 	<Sidebar />
 	<div class="flex-1 md:mr-[min(33.3333333%,400px)] mr-0">
 		<slot />
 	</div>
+	<Footer />
 </body>
