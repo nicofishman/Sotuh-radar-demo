@@ -1,11 +1,8 @@
 import Header from './components/sections/Header.astro';
-import Technology1 from './components/sections/Technology1.astro';
-import Technology2 from './components/sections/Technology2.astro';
-import Technology3 from './components/sections/Technology3.astro';
-import Technology4 from './components/sections/Technology4.astro';
-import Join from './components/sections/Join.astro';
+import Fireteams from './components/sections/Fireteams.astro';
+import Hours from './components/sections/Hours.astro';
+import People from './components/sections/People.astro';
 import CompanyInfo from './components/sections/CompanyInfo.astro';
-import PastProjects from './components/sections/PastProjects.astro';
 
 export type SectionsType = {
     id: string,
@@ -16,46 +13,29 @@ export type SectionsType = {
 
 export const Sections: SectionsType[] = [
     {
-        id: 'Overview',
+        id: '',
         component: Header
     },
     {
-        id: 'Technology',
+        id: 'Insights',
         children: [
             {
-                id: 'Language',
-                component: Technology1
+                id: 'Fireteams',
+                component: Fireteams
             },
             {
-                id: 'Services',
-                component: Technology3
+                id: 'People',
+                component: People
             },
             {
-                id: 'Framework',
-                component: Technology2
-            },
-            {
-                id: 'Platform',
-                component: Technology4
+                id: 'Hours',
+                component: Hours
             }
         ]
     },
     {
-        id: 'Work',
-        children: [
-            {
-                id: 'Join SOUTHWORKS',
-                component: Join
-            },
-            {
-                id: 'CompanyInfo',
-                component: CompanyInfo
-            },
-            {
-                id: 'Past Projects',
-                component: PastProjects
-            }
-        ]
+        id: 'More about SOUTHWORKS',
+        component: CompanyInfo
     }
 
 ];

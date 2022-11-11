@@ -38,33 +38,15 @@ const fontStyle: {
 ---
 
 {
-	!('children' in section)
-		? (
-			<a
-				href={`#${section.id}`}
-				class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30"
-			>
-				<span
-					class={clsx(
-						'text-white font-sans hover:text-opacity-100 transition-colors',
-						Object.keys(fontStyle).includes(stacked.toString())
-							? fontStyle[stacked].size
-							: 'text-base',
-						Object.keys(fontStyle).includes(stacked.toString())
-							? fontStyle[stacked].opacity
-							: 1
-					)}
+	section.id.length > 0 ?
+		(!('children' in section)
+			? (
+				<a
+					href={`#${section.id}`}
+					class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30"
 				>
-					{section.id}
-				</span>
-			</a>
-		)
-		: (
-			section.children && (
-				<div class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30">
-					<Accordion
-						header={section.id}
-						className={clsx(
+					<span
+						class={clsx(
 							'text-white font-sans hover:text-opacity-100 transition-colors',
 							Object.keys(fontStyle).includes(stacked.toString())
 								? fontStyle[stacked].size
@@ -74,13 +56,33 @@ const fontStyle: {
 								: 1
 						)}
 					>
-						<div class="ml-8">
-							{section.children.map((section) => (
-								<Astro.self section={section} level={level + 1} />
-							))}
-						</div>
-					</Accordion>
-				</div>
+						{section.id}
+					</span>
+				</a>
 			)
-		)
+			: (
+				section.children && (
+					<div class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30">
+						<Accordion
+							header={section.id}
+							className={clsx(
+								'text-white font-sans hover:text-opacity-100 transition-colors',
+								Object.keys(fontStyle).includes(stacked.toString())
+									? fontStyle[stacked].size
+									: 'text-base',
+								Object.keys(fontStyle).includes(stacked.toString())
+									? fontStyle[stacked].opacity
+									: 1
+							)}
+						>
+							<div class="ml-8">
+								{section.children.map((section) => (
+									<Astro.self section={section} level={level + 1} />
+								))}
+							</div>
+						</Accordion>
+					</div>
+				)
+			))
+		: <></>
 }

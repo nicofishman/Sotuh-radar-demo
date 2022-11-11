@@ -5,10 +5,22 @@ module.exports = {
         extend: {
             colors: {
                 'dark-green': '#03332b',
-                card: {
-                    DEFAULT: '#fc4c02',
-                    'light-orange': '#E95420',
-                    yellow: '#EFB73E'
+                primary: {
+                    orange: '#fc4c02',
+                    green: '#80dfa6',
+                    'dark-green': '#13322b',
+                    white: '#fff'
+                },
+                secondary: {
+                    white: '#fff',
+                    aqua: '#d2f2f2',
+                    cream: '#fdf1be',
+                    rose: '#fec9b3',
+                    'light-green': '#d9f5e4',
+                    gray: '#868686',
+                    teal: '#6ad2d2',
+                    yellow: '#f9d026',
+                    red: '#ff3400'
                 },
                 navbar: '#04332b'
             },
