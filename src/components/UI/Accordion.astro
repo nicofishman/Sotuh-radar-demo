@@ -6,39 +6,36 @@ const { header, className } = Astro.props as { header: string; className: string
 ---
 
 <div class="accordion accordion-flush" id={`accordion-${header}-FlushExample`}>
-	<div>
-		<h2 class="accordion-header mb-0" id="flush-headingOne">
-			<button
-				class={clsx(className, 'group flex w-full items-center justify-between')}
-				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target={`#flush-${header}-collapseOne`}
-				aria-expanded="false"
-				aria-controls={`flush-${header}-collapseOne`}
-			>
-				{header}
-				<div class="icon group-aria-expanded:rotate-180 transition-transform duration-500">
-					<ChevronDownIcon />
-				</div>
-			</button>
-		</h2>
-		<div
-			id={`flush-${header}-collapseOne`}
-			class="accordion-collapse border-0 collapse"
-			aria-labelledby={`flush-${header}-headingOne`}
-			data-bs-parent={`#accordion-${header}-FlushExample`}
+	<h2 class="accordion-header mb-0" id="flush-headingOne">
+		<button
+			class={clsx(className, 'group flex w-full items-center justify-between')}
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target={`#flush-${header}-collapseOne`}
+			aria-expanded="false"
+			aria-controls={`flush-${header}-collapseOne`}
 		>
-			<div class="accordion-body py-4 px-5">
-				<slot />
+			{header}
+			<div class="icon group-aria-expanded:rotate-180 transition-transform duration-500">
+				<ChevronDownIcon />
 			</div>
+		</button>
+	</h2>
+	<div
+		id={`flush-${header}-collapseOne`}
+		class="accordion-collapse border-0 collapse"
+		aria-labelledby={`flush-${header}-headingOne`}
+		data-bs-parent={`#accordion-${header}-FlushExample`}
+	>
+		<div class="accordion-body py-4 px-5">
+			<slot />
 		</div>
 	</div>
 </div>
-
-<script src="../../../node_modules/tw-elements/dist/js/index.min.js"></script>
 
 <style is:inline>
 	.collapse {
 		visibility: visible;
 	}
 </style>
+<script src="../../../node_modules/tw-elements/dist/js/index.min.js"></script>
