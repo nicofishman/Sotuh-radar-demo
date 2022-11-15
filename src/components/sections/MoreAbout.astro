@@ -1,9 +1,13 @@
 ---
 import ButtonChevron from '../UI/ButtonChevron.astro';
 import Card from '../UI/Card.astro';
+import Underlined from '../UI/Underlined.astro';
 ---
 
-<div class="bg-slate-500 w-full flex flex-col gap-6 h-full p-5">
+<div class="bg-white w-full flex flex-col gap-6 h-full p-5">
+	<h2 class="font-semibold">
+		More about <Underlined class="after:bg-primary-green">SOUTHWORKS</Underlined>
+	</h2>
 	<Card class="bg-secondary-cream min-h-80 h-auto flex flex-col text-center items-center">
 		<h4 class="font-bold">Join SOUTHWORKS</h4>
 		<p class="text-center text-base">
@@ -15,7 +19,7 @@ import Card from '../UI/Card.astro';
 	</Card>
 	<div class="flex flex-col md:flex-row gap-5 h-auto">
 		<Card
-			class="bg-secondary-light-green min-h-80 md:w-1/2 flex flex-col items-center h-auto w-full"
+			class="bg-secondary-light-green min-h-80 md:flex-1 flex flex-col items-center h-auto w-full"
 		>
 			<h4 class="font-bold mb-6">Past projects</h4>
 			<p class="text-center text-base">
@@ -25,7 +29,7 @@ import Card from '../UI/Card.astro';
 			</p>
 			<ButtonChevron>Customer stories</ButtonChevron>
 		</Card>
-		<Card class="bg-secondary-rose min-h-80 md:w-1/2 flex flex-col items-center h-auto w-full">
+		<Card class="bg-secondary-rose min-h-80 md:flex-1 flex flex-col items-center h-auto w-full">
 			<h4 class="font-bold mb-6">Company Info</h4>
 			<p class="text-center text-base">
 				Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
@@ -35,4 +39,12 @@ import Card from '../UI/Card.astro';
 			<ButtonChevron>Discover SOUTHWORKS</ButtonChevron>
 		</Card>
 	</div>
+	<Card
+		class="bg-secondary-teal rounded-3xl flex-col flex items-start justify-center mt-12 md:mt-5 h-60 p-14"
+	>
+		<h4 class="w-1/3 min-w-[330px] font-semibold">
+			Learn more about <span class="font-bold">SOUTHWORKS</span>
+		</h4>
+		<ButtonChevron class="w-60">Go to website</ButtonChevron>
+	</Card>
 </div>
