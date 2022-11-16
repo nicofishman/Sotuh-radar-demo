@@ -1,0 +1,13 @@
+---
+import clsx from 'clsx';
+const { class: className } = Astro.props;
+---
+
+<div
+	class={clsx(
+		'bg-primary-green w-48 rounded-full h-8 font-bold flex justify-center items-center',
+		className
+	)}
+>
+	<slot />
+</div>

@@ -3,6 +3,7 @@ import Header from './components/sections/Header.astro';
 import Hours from './components/sections/Hours.astro';
 import MoreAbout from './components/sections/MoreAbout.astro';
 import People from './components/sections/People.astro';
+import Insights from './components/sections/Insights.astro';
 
 export type SectionsType = {
     id: string,
@@ -18,20 +19,21 @@ export const Sections: SectionsType[] = [
     },
     {
         id: 'Insights',
-        children: [
-            {
-                id: 'Fireteams',
-                component: Fireteams
-            },
-            {
-                id: 'People',
-                component: People
-            },
-            {
-                id: 'Hours',
-                component: Hours
-            }
-        ]
+        component: Insights
+        // children: [
+        //     {
+        //         id: 'Fireteams',
+        //         component: Fireteams
+        //     },
+        //     {
+        //         id: 'People',
+        //         component: People
+        //     },
+        //     {
+        //         id: 'Hours',
+        //         component: Hours
+        //     }
+        // ]
     },
     {
         id: 'More about SOUTHWORKS',

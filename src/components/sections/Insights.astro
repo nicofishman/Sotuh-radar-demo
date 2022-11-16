@@ -1,0 +1,78 @@
+---
+import ShadowCard from '../UI/ShadowCard.astro';
+
+import Chip from './Chip.astro';
+---
+
+<div class="w-full h-auto">
+	<div class="items-center flex flex-col">
+		<h4 class="font-semibold mb-0">Insights</h4>
+		<h2 class="font-bold mt-0">Current projects in volume</h2>
+	</div>
+	<div class="flex w-full flex-row flex-wrap px-56 my-20 justify-center">
+		<img src="/BubbleChart.png" class="w-96 aspect-square" />
+		<img src="/BubbleChart.png" class="w-96 aspect-square" />
+		<img src="/BubbleChart.png" class="w-96 aspect-square" />
+		<img src="/BubbleChart.png" class="w-96 aspect-square" />
+	</div>
+	<div class="px-12 flex flex-col gap-7">
+		<ShadowCard>
+			<Chip class="bg-secondary-teal">Open positions</Chip>
+			<p class="py-5 font-medium md:w-2/3 w-full">
+				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
+				euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip
+			</p>
+		</ShadowCard>
+		<ShadowCard>
+			<Chip class="bg-primary-green">Active Projects</Chip>
+			<p class="py-5 font-medium md:w-2/3 w-full">
+				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
+				euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip
+			</p>
+		</ShadowCard>
+		<ShadowCard>
+			<Chip class="bg-secondary-red">Developers</Chip>
+			<p class="py-5 font-medium md:w-2/3 w-full">
+				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
+				euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip
+			</p>
+		</ShadowCard>
+		<ShadowCard>
+			<Chip class="bg-primary-yellow">Opportunities</Chip>
+			<p class="py-5 font-medium md:w-2/3 w-full">
+				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
+				euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip
+			</p>
+		</ShadowCard>
+	</div>
+	<div class="flex flex-row justify-center gap-7 w-full px-28 my-28 flex-wrap">
+		<div class="flex flex-col w-auto">
+			<h5 class="font-bold">LOREM IPSUM</h5>
+			<span class="text-7xl font-bold">76%</span>
+			<p class="font-bold text-2xl">Lorem Ipsum bla</p>
+			<div class="bg-primary-orange w-full rounded-full h-2 my-5 max-w-[230px]"></div>
+		</div>
+		<div class="flex flex-col w-auto">
+			<h5 class="font-bold">LOREM IPSUM</h5>
+			<span class="text-7xl font-bold">84%</span>
+			<p class="font-bold text-2xl">Lorem Ipsum bla</p>
+			<div class="bg-primary-orange w-full rounded-full h-2 my-5 max-w-[230px]"></div>
+		</div>
+		<div class="flex flex-col w-auto">
+			<h5 class="font-bold">LOREM IPSUM</h5>
+			<span class="text-7xl font-bold">76%</span>
+			<p class="font-bold text-2xl">Lorem Ipsum bla</p>
+			<div class="bg-primary-orange w-full rounded-full h-2 my-5 max-w-[230px]"></div>
+		</div>
+		<div class="flex flex-col w-auto">
+			<h5 class="font-bold">LOREM IPSUM</h5>
+			<span class="text-7xl font-bold">84%</span>
+			<p class="font-bold text-2xl">Lorem Ipsum bla</p>
+			<div class="bg-primary-orange w-full rounded-full h-2 my-5 max-w-[230px]"></div>
+		</div>
+	</div>
+</div>
