@@ -4,6 +4,7 @@ import Hours from './components/sections/Hours.astro';
 import MoreAbout from './components/sections/MoreAbout.astro';
 import People from './components/sections/People.astro';
 import Insights from './components/sections/Insights.astro';
+import Radar from './components/sections/Radar.astro';
 
 export type SectionsType = {
     id: string,
@@ -16,6 +17,10 @@ export const Sections: SectionsType[] = [
     {
         id: '',
         component: Header
+    },
+    {
+        id: 'Radar',
+        component: Radar
     },
     {
         id: 'Insights',
