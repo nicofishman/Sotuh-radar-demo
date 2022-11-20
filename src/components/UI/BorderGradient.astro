@@ -1,0 +1,8 @@
+---
+import clsx from 'clsx';
+const { class: className } = Astro.props;
+---
+
+<span class={clsx('rounded-md p-[3px]', className)}>
+	<span class="rounded-md px-1 bg-white"><slot /></span>
+</span>

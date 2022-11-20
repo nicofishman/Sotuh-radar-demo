@@ -1,0 +1,22 @@
+---
+import clsx from 'clsx';
+
+const { class: className, size } = Astro.props;
+const mySize = size || '100%';
+---
+
+<span class={clsx('myClass2 relative', className)}>
+	<slot />
+</span>
+
+<style define:vars={{ mySize }}>
+	.myClass2::after {
+		position: absolute;
+		bottom: -10%;
+		left: 0;
+		width: var(--mySize);
+		height: 8px;
+		content: '';
+		border-radius: 9999px;
+	}
+</style>
