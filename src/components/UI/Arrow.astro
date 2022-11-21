@@ -1,9 +1,17 @@
 ---
 import clsx from 'clsx';
-const { class: className } = Astro.props;
+const { class: className, color } = Astro.props;
 const { default: innerHTML } = await import('../../../public/arrow.svg?raw');
+
+const myColor = color || '#fc4c02';
 ---
 
-<div class={clsx('w-10', className)}>
+<div class={clsx('w-10', className)} id="arrow">
 	<Fragment set:html={innerHTML} />
 </div>
+
+<style is:global define:vars={{ myColor }}>
+	#arrow > svg > path {
+		fill: var(--myColor);
+	}
+</style>
