@@ -2,28 +2,35 @@
 // poner absolut a cada item
 import Arrow from '../UI/Arrow.astro';
 import ShadowCard from '../UI/ShadowCard.astro';
+import Switch from '../UI/Switch.astro';
 ---
 
-<div class="bg-overview bg-cover bg-center bg-no-repeat w-full aspect-[10/7] relative">
+<div class="bg-overview bg-cover bg-no-repeat w-full h-screen relative">
 	<div
-		class="flex flex-row w-full absolute left-0 top-0 pt-7 pl-4 pr-5 items-center justify-between"
+		class="flex flex-row w-full absolute left-0 top-[4%] pl-6 pr-5 items-center justify-between"
 	>
 		<div class="flex items-center gap-4">
 			<Arrow color="#fff" class="rotate-180" />
-			<h5 class="text-white">go back to SOUTHWORKS</h5>
+			<h4 class="text-white">go back to SOUTHWORKS</h4>
 		</div>
-		<div>
-			<h6 class="text-white place-self-end">Dark mode</h6>
+		<div class="flex items-center gap-4">
+			<h6 class="text-white place-self-end mb-0">Dark mode</h6>
+			<Switch />
 		</div>
 	</div>
-	<div class="absolute left-36 top-64">
+	<div class="absolute left-36 top-[35%]">
 		<h3 class="font-semibold text-white">SOUTHWORKS</h3>
-		<h1 class="text-7xl font-extrabold text-white mb-20">Development radar</h1>
+		<h1 class="md:text-7xl text-4xl font-extrabold text-white mb-20">
+			Development <br /> radar
+		</h1>
 	</div>
 	<div class="absolute left-36 bottom-20">
-		<ShadowCard class="w-[418px] h-44 py-7 px-10">
+		<ShadowCard class="min-w-[300px] w-2/5 h-44 py-7 px-10">
 			<h6 class="font-semibold">Subtitle</h6>
-            <h6>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi </h6>
+			<h6>
+				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
+				euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+			</h6>
 		</ShadowCard>
 	</div>
 </div>

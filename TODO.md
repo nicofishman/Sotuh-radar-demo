@@ -4,6 +4,7 @@
 
 -   [✔] Color palette from Figma
 -   [ ] Define sections
+-   [ ] Check mobile layout
 
 ## Header
 

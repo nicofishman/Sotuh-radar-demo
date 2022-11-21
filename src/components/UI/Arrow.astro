@@ -6,7 +6,7 @@ const { default: innerHTML } = await import('../../../public/arrow.svg?raw');
 const myColor = color || '#fc4c02';
 ---
 
-<div class={clsx('w-10', className)} id="arrow">
+<div class={clsx('w-auto', className)} id="arrow">
 	<Fragment set:html={innerHTML} />
 </div>
 
