@@ -31,7 +31,7 @@ module.exports = {
             },
             backgroundImage: {
                 'card-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))',
-                overview: 'url(/bg-Header.svg)',
+                overview: 'url(/Header.png)',
                 gradient: 'linear-gradient(180.42deg, #FAAF25 0.36%, #FC4C02 52.07%, #FF3400 99.65%)',
                 learnMore: 'url(/bg-LearnMore.png)'
             }
