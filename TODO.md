@@ -8,13 +8,13 @@
 
 ## Header
 
--   [ ] Go Back link with arrow
--   [ ] Dark Mode
+-   [✔] Go Back link with arrow
+-   [~] Dark Mode
     -   [ ] Dark mode functionality (switch between two styles)
-    -   [ ] Dark Mode Switch
+    -   [✔] Dark Mode Switch
 -   [✔] Orange background color (background from Figma)
--   [ ] Title
--   [ ] Card Subtitle
+-   [✔] Title
+-   [✔] Card Subtitle
 
 ## Sidebar
 
