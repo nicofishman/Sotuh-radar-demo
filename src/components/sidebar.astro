@@ -4,8 +4,6 @@ import { Sections } from '../sections';
 import SidebarGenerator from './sidebarGenerator.astro';
 ---
 
-<div
-	class="bg-navbar bg-card-gradient z-10 fixed right-0 top-0 h-screen max-w-[calc(400px-20px)] w-1/3 md:block hidden"
->
+<div class="bg-primary-light-gray z-10 fixed right-0 top-0 h-screen w-80 md:block hidden">
 	{Sections.map((s) => <SidebarGenerator section={s} />)}
 </div>

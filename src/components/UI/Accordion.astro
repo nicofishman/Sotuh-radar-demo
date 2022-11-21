@@ -1,6 +1,7 @@
 ---
-import { ChevronDownIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
+
+import ChevronDownIcon from './ChevronDownIcon.astro';
 
 const { header, className } = Astro.props as { header: string; className: string };
 ---
@@ -8,7 +9,7 @@ const { header, className } = Astro.props as { header: string; className: string
 <div class="accordion accordion-flush" id={`accordion-${header}-FlushExample`}>
 	<h2 class="accordion-header mb-0" id="flush-headingOne">
 		<button
-			class={clsx(className, 'group flex w-full items-center justify-between')}
+			class={clsx(className, 'group flex w-full items-center')}
 			type="button"
 			data-bs-toggle="collapse"
 			data-bs-target={`#flush-${header}-collapseOne`}
@@ -16,7 +17,9 @@ const { header, className } = Astro.props as { header: string; className: string
 			aria-controls={`flush-${header}-collapseOne`}
 		>
 			{header}
-			<div class="icon group-aria-expanded:rotate-180 transition-transform duration-500">
+			<div
+				class="icon group-aria-expanded:rotate-180 transition-transform duration-500 ml-4 w-4"
+			>
 				<ChevronDownIcon />
 			</div>
 		</button>
@@ -27,7 +30,7 @@ const { header, className } = Astro.props as { header: string; className: string
 		aria-labelledby={`flush-${header}-headingOne`}
 		data-bs-parent={`#accordion-${header}-FlushExample`}
 	>
-		<div class="accordion-body py-4 px-5">
+		<div class="accordion-body pt-4">
 			<slot />
 		</div>
 	</div>

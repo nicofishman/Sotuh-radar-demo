@@ -4,85 +4,79 @@ import type { SectionsType } from '../sections';
 import clsx from 'clsx';
 
 import Accordion from './UI/Accordion.astro';
-const { section, level } = Astro.props as { section: SectionsType; level: number };
+import Arrow from './UI/Arrow.astro';
+const { section, level } = Astro.props as {
+	section: SectionsType;
+	level: number;
+};
 
 const stacked = level ?? 0;
 
 const fontStyle: {
 	[key: number]: {
 		size: string;
-		opacity: string;
 	};
 } = {
 	0: {
 		size: 'text-xl',
-		opacity: 'text-opacity-100',
 	},
 	1: {
 		size: 'text-lg',
-		opacity: 'text-opacity-80',
 	},
 	2: {
 		size: 'text-base',
-		opacity: 'text-opacity-60',
 	},
 	3: {
 		size: 'text-sm',
-		opacity: 'text-opacity-40',
 	},
 	4: {
 		size: 'text-xs',
-		opacity: 'text-opacity-20',
 	},
 };
 ---
 
 {
-	section.id.length > 0 ?
-		(!('children' in section)
-			? (
+	section.id.length > 0 &&
+		(!('children' in section) ? (
+			stacked === 0 ? (
 				<a
 					href={`#${section.id}`}
-					class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30"
+					class={clsx('block w-full pl-4 py-7 border-b-[2px] border-b-[#E8E9EA] mx-10')}
 				>
 					<span
 						class={clsx(
-							'text-white hover:text-opacity-100 transition-colors',
+							'text-primary-dark-green text-3xl font-extrabold hover:text-opacity-100 transition-colors',
 							Object.keys(fontStyle).includes(stacked.toString())
 								? fontStyle[stacked].size
-								: 'text-base',
-							Object.keys(fontStyle).includes(stacked.toString())
-								? fontStyle[stacked].opacity
-								: 1
+								: 'text-base'
 						)}
 					>
 						{section.id}
 					</span>
 				</a>
+			) : (
+				<a href={`#${section.id}`} class="w-full py-3 ml-5 flex items-center">
+					<Arrow />
+					<span class="font-medium text-xl">{section.id}</span>
+				</a>
 			)
-			: (
-				section.children && (
-					<div class="block px-4 py-3 mb-2 border-b-[1px] border-b-[#5adea6]/30">
-						<Accordion
-							header={section.id}
-							className={clsx(
-								'text-white hover:text-opacity-100 transition-colors',
-								Object.keys(fontStyle).includes(stacked.toString())
-									? fontStyle[stacked].size
-									: 'text-base',
-								Object.keys(fontStyle).includes(stacked.toString())
-									? fontStyle[stacked].opacity
-									: 1
-							)}
-						>
-							<div class="ml-8">
-								{section.children.map((section) => (
-									<Astro.self section={section} level={level + 1} />
-								))}
-							</div>
-						</Accordion>
-					</div>
-				)
-			))
-		: <></>
+		) : (
+			section.children && (
+				<div class="block w-full pl-4 py-7 border-b-[2px] border-b-[#E8E9EA] mx-10">
+					<Accordion
+						header={section.id}
+						className={clsx(
+							'text-primary-dark-green font-extrabold text-3xl hover:text-opacity-100 transition-colors',
+							Object.keys(fontStyle).includes(stacked.toString())
+								? fontStyle[stacked].size
+								: 'text-base'
+						)}
+					>
+						{section.children.map((section) => (
+							<Astro.self section={section} level={level + 1} />
+						))}
+					</Accordion>
+				</div>
+			)
+		))
 }

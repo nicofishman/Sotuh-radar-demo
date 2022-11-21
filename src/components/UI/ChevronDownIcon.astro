@@ -1,0 +1,9 @@
+---
+import clsx from 'clsx';
+const { class: className } = Astro.props;
+const { default: innerHTML } = await import('../../../public/ChevronDown.svg?raw');
+---
+
+<div class={clsx('w-10', className)}>
+	<Fragment set:html={innerHTML} />
+</div>

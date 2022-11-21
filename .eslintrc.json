@@ -29,7 +29,7 @@
 				"tailwindcss/classnames-order": "warn",
 				"no-tabs": "off",
 				"comma-dangle": "off",
-				"multiline-ternary": "error",
+				"multiline-ternary": "off",
 				"operator-linebreak": "off",
 				"no-console": "warn"
 			}
