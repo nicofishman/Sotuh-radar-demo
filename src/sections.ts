@@ -30,20 +30,20 @@ export const Sections: SectionsType[] = [
     {
         id: 'Insights',
         component: Insights,
-        children: [
-            {
-                id: 'Fireteams',
-                component: Fireteams
-            },
-            {
-                id: 'People',
-                component: People
-            },
-            {
-                id: 'Hours',
-                component: Hours
-            }
-        ]
+        // children: [
+        //     {
+        //         id: 'Fireteams',
+        //         component: Fireteams
+        //     },
+        //     {
+        //         id: 'People',
+        //         component: People
+        //     },
+        //     {
+        //         id: 'Hours',
+        //         component: Hours
+        //     }
+        // ]
     },
     {
         id: 'More about SOUTHWORKS',
