@@ -7,28 +7,20 @@ import CMS from '../../loadCMS';
 <div class="w-full">
 	<div class="px-12 flex flex-col gap-7">
 		<ShadowCard>
-			<Chip class="bg-secondary-teal">{CMS('people', 'title1')}</Chip>
-			<p class="py-5 font-medium md:w-2/3 w-full">
-				{CMS('people', 'text1')}
-			</p>
+			<Chip class="bg-secondary-teal" set:html={CMS('people', 'title1')} />
+			<p class="py-5 font-medium md:w-2/3 w-full" set:html={CMS('people', 'text1')}></p>
 		</ShadowCard>
 		<ShadowCard>
-			<Chip class="bg-primary-green">{CMS('people', 'title2')}</Chip>
-			<p class="py-5 font-medium md:w-2/3 w-full">
-				{CMS('people', 'text2')}
-			</p>
+			<Chip class="bg-primary-green" set:html={CMS('people', 'title2')} />
+			<p class="py-5 font-medium md:w-2/3 w-full" set:html={CMS('people', 'text2')}></p>
 		</ShadowCard>
 		<ShadowCard>
-			<Chip class="bg-secondary-red">{CMS('people', 'title3')}</Chip>
-			<p class="py-5 font-medium md:w-2/3 w-full">
-				{CMS('people', 'text3')}
-			</p>
+			<Chip class="bg-secondary-red" set:html={CMS('people', 'title3')} />
+			<p class="py-5 font-medium md:w-2/3 w-full" set:html={CMS('people', 'text3')}></p>
 		</ShadowCard>
 		<ShadowCard>
-			<Chip class="bg-secondary-yellow">{CMS('people', 'title3')}</Chip>
-			<p class="py-5 font-medium md:w-2/3 w-full">
-				{CMS('people', 'text4')}
-			</p>
+			<Chip class="bg-secondary-yellow" set:html={CMS('people', 'title3')} />
+			<p class="py-5 font-medium md:w-2/3 w-full" set:html={CMS('people', 'text4')}></p>
 		</ShadowCard>
 	</div>
 </div>

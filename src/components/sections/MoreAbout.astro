@@ -7,29 +7,28 @@ import Underlined from '../UI/UnderlinedMasked.astro';
 
 <div class="bg-white w-full flex flex-col gap-6 h-full p-5">
 	<h2 class="font-semibold">
-		{CMS('moreAbout', 'title')}
-		<Underlined class="after:bg-primary-green">{CMS('moreAbout', 'titleUnderlined')}</Underlined
-		>
+		<span set:html={CMS('moreAbout', 'title')}></span>
+		<Underlined class="after:bg-primary-green" set:html={CMS('moreAbout', 'titleUnderlined')} />
 	</h2>
 	<Card class="bg-secondary-cream min-h-80 p-12 h-auto flex flex-col text-center items-center">
-		<h4 class="font-bold">{CMS('moreAbout', 'card1Title')}</h4>
+		<h4 class="font-bold" set:html={CMS('moreAbout', 'card1Title')}></h4>
 		<p class="text-center text-base" set:html={CMS('moreAbout', 'card1Text')}></p>
-		<ButtonChevron class="w-60">{CMS('moreAbout', 'card1Button')}</ButtonChevron>
+		<ButtonChevron class="w-60" set:html={CMS('moreAbout', 'card1Button')} />
 	</Card>
 	<div class="flex flex-col md:flex-wrap md:flex-row gap-5 h-auto">
 		<Card
 			class="bg-secondary-light-green min-h-80 md:flex-1 flex flex-col p-12 items-center h-auto w-full"
 		>
-			<h4 class="font-bold mb-6">{CMS('moreAbout', 'card2Title')}</h4>
+			<h4 class="font-bold mb-6" set:html={CMS('moreAbout', 'card2Title')}></h4>
 			<p class="text-center text-base" set:html={CMS('moreAbout', 'card2Text')}></p>
-			<ButtonChevron class="w-60">{CMS('moreAbout', 'card2Button')}</ButtonChevron>
+			<ButtonChevron class="w-60" set:html={CMS('moreAbout', 'card2Button')} />
 		</Card>
 		<Card
 			class="bg-secondary-rose min-h-80 md:flex-1 flex flex-col items-center p-12 h-auto w-full"
 		>
-			<h4 class="font-bold mb-6">{CMS('moreAbout', 'card3Title')}</h4>
+			<h4 class="font-bold mb-6" set:html={CMS('moreAbout', 'card3Title')}></h4>
 			<p class="text-center text-base" set:html={CMS('moreAbout', 'card3Text')}></p>
-			<ButtonChevron class="w-60">{CMS('moreAbout', 'card3Button')}</ButtonChevron>
+			<ButtonChevron class="w-60" set:html={CMS('moreAbout', 'card3Button')} />
 		</Card>
 	</div>
 
@@ -40,7 +39,7 @@ import Underlined from '../UI/UnderlinedMasked.astro';
 			<h4 class="w-1/3 min-w-[330px] font-semibold" set:html={CMS('moreAbout', 'card4Title')}>
 			</h4>
 			<p class="text-center text-base" set:html={CMS('moreAbout', 'card4Text')}></p>
-			<ButtonChevron class="w-60">{CMS('moreAbout', 'card4Button')}</ButtonChevron>
+			<ButtonChevron class="w-60" set:html={CMS('moreAbout', 'card4Button')} />
 		</Card>
 	</div>
 </div>

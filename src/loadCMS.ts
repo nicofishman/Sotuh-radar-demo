@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import json from './cms.json';
 
 type CMSSections = keyof typeof json;

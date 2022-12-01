@@ -1,5 +1,4 @@
 ---
-// poner absolut a cada item
 import CMS from '../../loadCMS';
 import Arrow from '../UI/Arrow.astro';
 import ShadowCard from '../UI/ShadowCard.astro';
@@ -12,7 +11,7 @@ import Switch from '../UI/Switch';
 	>
 		<div class="flex items-center gap-4">
 			<Arrow color="#fff" class="rotate-180" />
-			<h4 class="text-white">{CMS('header', 'goBack')}</h4>
+			<h4 class="text-white" set:html={CMS('header', 'goBack')}></h4>
 		</div>
 		<div class="flex items-center gap-4">
 			<h6 class="text-white place-self-end mb-0">Dark mode</h6>
@@ -20,7 +19,7 @@ import Switch from '../UI/Switch';
 		</div>
 	</div>
 	<div class="absolute left-36 top-[35%]">
-		<h3 class="font-semibold text-white">{CMS('header', 'title')}</h3>
+		<h3 class="font-semibold text-white" set:html={CMS('header', 'title')}></h3>
 		<h1
 			class="md:text-7xl text-4xl font-extrabold text-white mb-20"
 			set:html={CMS('header', 'devRadar')}
@@ -29,10 +28,8 @@ import Switch from '../UI/Switch';
 	</div>
 	<div class="absolute left-36 bottom-20">
 		<ShadowCard class="min-w-[300px] w-2/5 h-44 py-8 px-10">
-			<h6 class="font-semibold">{CMS('header', 'cardTitle')}</h6>
-			<h6>
-				{CMS('header', 'cardText')}
-			</h6>
+			<h6 class="font-semibold" set:html={CMS('header', 'cardTitle')}></h6>
+			<h6 set:html={CMS('header', 'cardText')}></h6>
 		</ShadowCard>
 	</div>
 </div>
