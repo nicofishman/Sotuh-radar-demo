@@ -9,6 +9,6 @@ const Sect = 'children' in section ? section.children : section.component;
 ---
 
 <div id={section.id} class={clsx('children' in section && 'p-5')}>
-	{'children' in section && <h1 class="font-bold text-2xl">{section.id}</h1>}
+	<!-- {'children' in section && <h1 class="font-bold text-2xl">{section.id}</h1>} -->
 	{Sect && (Array.isArray(Sect) ? Sect.map((s) => <Astro.self section={s} />) : <Sect />)}
 </div>

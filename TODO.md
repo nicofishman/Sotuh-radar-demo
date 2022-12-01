@@ -37,7 +37,7 @@
 ## Insights
 
 -   [✔] Title
--   [ ] Graphs
+-   [~] Graphs
     -   [✔] Mock Up
     -   [ ] Generate from file
 -   [✔] Cards with title chips
@@ -49,6 +49,7 @@
 -   [~] Card Layout
 -   [✔] Card component
     -   [✔] Button with chevron
+-   [ ] Fix Learn more about BG image
 
 ## Footer
 
@@ -68,3 +69,11 @@
 -   [✔] Title
 -   [✔] Paragraph
 -   [✔] Countries
+
+### Extras
+
+-   [ ] Personalizar para ORT
+    -   [ ] Go back to https://www.ORT.edu.ar
+    -   [ ] Subtitulo que explique la página (mensaje a chicos que van a entrar)
+    -   [ ] ORT STUDENTS RADAR
+    -   [ ] Secciones primaria, secundaria, terciario, extensión
