@@ -1,0 +1,62 @@
+{
+    "header": {
+        "title": "SOUTHWORKS",
+        "goBack": "go back to SOUTHWORKS",
+        "devRadar": "Development <br/> radar",
+        "cardTitle": "Subtitle",
+        "cardText": "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi"
+    },
+    "radar": {
+        "card1": "Open positions",
+        "card2": "Active projects",
+        "card3": "Opportunities",
+        "card4": "Developers"
+    },
+    "overview": {
+        "title": "Overview",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea ."
+    },
+    "fireteams": {
+        "title": "Current projects in volume"
+    },
+    "people": {
+        "title1": "Open positions",
+        "text1": "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
+        "title2": "Active projects",
+        "text2": "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
+        "title3": "Opportunities",
+        "text3": "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
+        "title4": "Developers",
+        "text4": "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismoerat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"
+    },
+    "hours": {
+        "title1": "LOREM IPSUM",
+        "perc1": 76,
+        "desc1": "Lorem Ipsum bla",
+        "title2": "LOREM IPSUM",
+        "perc2": 84,
+        "desc2": "Lorem Ipsum bla",
+        "title3": "LOREM IPSUM",
+        "perc3": 76,
+        "desc3": "Lorem Ipsum bla",
+        "title4": "LOREM IPSUM",
+        "perc4": 84,
+        "desc4": "Lorem Ipsum bla"
+    },
+    "moreAbout": {
+        "title": "More about",
+        "titleUnderlined": "SOUTHWORKS",
+        "card1Title": "Join SOUTHWORKS",
+        "card1Text": "Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <strong>quis nostrud</strong> exerci tation",
+        "card1Button": "Customer stories",
+        "card2Title": "Past projects",
+        "card2Text": "Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <strong>quis nostrud</strong> exerci tation",
+        "card2Button": "Customer stories",
+        "card3Title": "Company Info",
+        "card3Text": "Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <strong>quis nostrud</strong> exerci tation",
+        "card3Button": "Discover SOUTHWORKS",
+        "card4Title": "Learn more about SOUTHWORKS",
+        "card4Text": "",
+        "card4Button": "Go to website"
+    }
+}

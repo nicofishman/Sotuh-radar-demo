@@ -1,4 +1,5 @@
 ---
+import CMS from '../../loadCMS';
 import ButtonChevron from '../UI/ButtonChevron.astro';
 import Card from '../UI/Card.astro';
 import Underlined from '../UI/UnderlinedMasked.astro';
@@ -6,39 +7,29 @@ import Underlined from '../UI/UnderlinedMasked.astro';
 
 <div class="bg-white w-full flex flex-col gap-6 h-full p-5">
 	<h2 class="font-semibold">
-		More about <Underlined class="after:bg-primary-green">SOUTHWORKS</Underlined>
+		{CMS('moreAbout', 'title')}
+		<Underlined class="after:bg-primary-green">{CMS('moreAbout', 'titleUnderlined')}</Underlined
+		>
 	</h2>
 	<Card class="bg-secondary-cream min-h-80 p-12 h-auto flex flex-col text-center items-center">
-		<h4 class="font-bold">Join SOUTHWORKS</h4>
-		<p class="text-center text-base">
-			Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
-				class="font-bold">quis nostrud</span
-			> exerci tation
-		</p>
-		<ButtonChevron class="w-60">Customer stories</ButtonChevron>
+		<h4 class="font-bold">{CMS('moreAbout', 'card1Title')}</h4>
+		<p class="text-center text-base" set:html={CMS('moreAbout', 'card1Text')}></p>
+		<ButtonChevron class="w-60">{CMS('moreAbout', 'card1Button')}</ButtonChevron>
 	</Card>
 	<div class="flex flex-col md:flex-wrap md:flex-row gap-5 h-auto">
 		<Card
 			class="bg-secondary-light-green min-h-80 md:flex-1 flex flex-col p-12 items-center h-auto w-full"
 		>
-			<h4 class="font-bold mb-6">Past projects</h4>
-			<p class="text-center text-base">
-				Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
-					class="font-bold">quis nostrud</span
-				> exerci tation
-			</p>
-			<ButtonChevron>Customer stories</ButtonChevron>
+			<h4 class="font-bold mb-6">{CMS('moreAbout', 'card2Title')}</h4>
+			<p class="text-center text-base" set:html={CMS('moreAbout', 'card2Text')}></p>
+			<ButtonChevron class="w-60">{CMS('moreAbout', 'card2Button')}</ButtonChevron>
 		</Card>
 		<Card
 			class="bg-secondary-rose min-h-80 md:flex-1 flex flex-col items-center p-12 h-auto w-full"
 		>
-			<h4 class="font-bold mb-6">Company Info</h4>
-			<p class="text-center text-base">
-				Lorem ipsum dolor sit amet, cons ectetuer. Ut wisi enim ad minim veniam, <span
-					class="font-bold">quis nostrud</span
-				> exerci tation
-			</p>
-			<ButtonChevron>Discover SOUTHWORKS</ButtonChevron>
+			<h4 class="font-bold mb-6">{CMS('moreAbout', 'card3Title')}</h4>
+			<p class="text-center text-base" set:html={CMS('moreAbout', 'card3Text')}></p>
+			<ButtonChevron class="w-60">{CMS('moreAbout', 'card3Button')}</ButtonChevron>
 		</Card>
 	</div>
 
@@ -46,10 +37,10 @@ import Underlined from '../UI/UnderlinedMasked.astro';
 		<Card
 			class="bg-learnMore bg-no-repeat bg-auto w-full flex-col flex items-start justify-center mt-12 md:mt-5 h-60 p-14"
 		>
-			<h4 class="w-1/3 min-w-[330px] font-semibold">
-				Learn more about <span class="font-bold">SOUTHWORKS</span>
+			<h4 class="w-1/3 min-w-[330px] font-semibold" set:html={CMS('moreAbout', 'card4Title')}>
 			</h4>
-			<ButtonChevron class="w-60">Go to website</ButtonChevron>
+			<p class="text-center text-base" set:html={CMS('moreAbout', 'card4Text')}></p>
+			<ButtonChevron class="w-60">{CMS('moreAbout', 'card4Button')}</ButtonChevron>
 		</Card>
 	</div>
 </div>

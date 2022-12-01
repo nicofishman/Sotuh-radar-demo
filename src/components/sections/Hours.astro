@@ -1,43 +1,44 @@
 ---
+import CMS from '../../loadCMS';
 import UnderlinedRounded from '../UI/UnderlinedRounded.astro';
 ---
 
 <div class="w-full">
 	<div class="flex flex-row justify-center gap-7 w-full px-28 my-28 flex-wrap">
 		<div class="flex flex-col w-auto mb-4">
-			<h5 class="font-bold">LOREM IPSUM</h5>
-			<span class="text-7xl font-bold">76%</span>
+			<h5 class="font-bold">{CMS('hours', 'title1')}</h5>
+			<span class="text-7xl font-bold">{`${CMS('hours', 'perc1')}%`}</span>
 			<p class="font-bold text-2xl">
 				<UnderlinedRounded class="after:bg-primary-orange after:bottom-[-80%]">
-					Lorem Ipsum bla
+					{CMS('hours', 'desc1')}
 				</UnderlinedRounded>
 			</p>
 			<!-- <div class="bg-primary-orange w-full rounded-full h-2 my-5 max-w-[230px]"></div> -->
 		</div>
 		<div class="flex flex-col w-auto mb-4">
-			<h5 class="font-bold">LOREM IPSUM</h5>
-			<span class="text-7xl font-bold">84%</span>
+			<h5 class="font-bold">{CMS('hours', 'title2')}</h5>
+			<span class="text-7xl font-bold">{`${CMS('hours', 'perc2')}%`}</span>
 			<p class="font-bold text-2xl">
 				<UnderlinedRounded class="after:bg-primary-orange after:bottom-[-80%]">
-					Lorem Ipsum bla
+					{CMS('hours', 'desc2')}
 				</UnderlinedRounded>
 			</p>
 		</div>
 		<div class="flex flex-col w-auto mb-4">
-			<h5 class="font-bold">LOREM IPSUM</h5>
-			<span class="text-7xl font-bold">76%</span>
+			<h5 class="font-bold">{CMS('hours', 'title3')}</h5>
+			<span class="text-7xl font-bold">{`${CMS('hours', 'perc3')}%`}</span>
 			<p class="font-bold text-2xl">
 				<UnderlinedRounded class="after:bg-primary-orange after:bottom-[-80%]">
-					Lorem Ipsum bla
+					{CMS('hours', 'desc3')}
 				</UnderlinedRounded>
 			</p>
 		</div>
 		<div class="flex flex-col w-auto mb-4">
-			<h5 class="font-bold">LOREM IPSUM</h5>
-			<span class="text-7xl font-bold">84%</span>
+			<h5 class="font-bold">{CMS('hours', 'title4')}</h5>
+			<span class="text-7xl font-bold">{`${CMS('hours', 'perc4')}%`}</span>
 			<p class="font-bold text-2xl">
 				<UnderlinedRounded class="after:bg-primary-orange after:bottom-[-80%]">
-					Lorem Ipsum bla
+					{CMS('hours', 'desc4')}
 				</UnderlinedRounded>
 			</p>
 		</div>

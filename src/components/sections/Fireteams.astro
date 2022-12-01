@@ -1,7 +1,11 @@
+---
+import CMS from '../../loadCMS';
+---
+
 <div class="w-full h-auto mt-40">
 	<div class="items-center flex flex-col">
 		<h4 class="font-semibold mb-0">Insights</h4>
-		<h2 class="font-bold mt-0">Current projects in volume</h2>
+		<h2 class="font-bold mt-0">{CMS('fireteams', 'title')}</h2>
 	</div>
 	<div class="flex w-full flex-row flex-wrap px-56 my-20 gap-6 justify-center">
 		<img src="/BubbleChart.png" class="w-96 aspect-square" />

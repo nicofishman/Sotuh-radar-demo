@@ -38,7 +38,7 @@
 	"plugins": ["@typescript-eslint", "tailwindcss", "import"],
 	"rules": {
 		"semi": ["error", "always"],
-		"indent": ["error", "tab"],
+		"indent": ["warn", "tab"],
 		"no-tabs": "off",
 		"tailwindcss/enforces-shorthand": "warn",
 		"tailwindcss/no-contradicting-classname": "warn",
